@@ -1,0 +1,193 @@
+@import url(normalize.css);
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/* use this class for block that has child floated elements */
+.ba-clearfix:before,
+.ba-clearfix:after {
+  content: '';
+  display: table; }
+
+.ba-clearfix:after {
+  clear: both; }
+
+/* hack for IE 6/7 */
+.ba-clearfix {
+  *zoom: 1; }
+
+/* classes for text */
+.ba-text-center {
+  text-align: center; }
+
+.ba-text-left {
+  text-align: left; }
+
+.ba-text-right {
+  text-align: right; }
+
+.ba-text-justify {
+  text-align: justify; }
+
+/* layout classes */
+.ba-container {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.ba-float-left {
+  float: left; }
+
+.ba-float-right {
+  float: right; }
+
+/* ba grid defination */
+/* use this class for block that has child floated elements */
+.ba-grid:before,
+.ba-grid:after {
+  content: '';
+  display: table; }
+
+.ba-grid:after {
+  clear: both; }
+
+/* hack for IE 6/7 */
+.ba-grid {
+  *zoom: 1; }
+
+.ba-grid {
+  margin: 0 -15px; }
+
+.ba-grid + .ba-grid {
+  margin-top: 30px; }
+
+.ba-grid > [class*="ba-column-"] {
+  padding: 0 15px; }
+
+[class*="ba-column-"] {
+  float: left; }
+
+.ba-column-12 {
+  width: 100%; }
+
+.ba-column-11 {
+  width: 91.667%; }
+
+.ba-column-10 {
+  width: 83.334%; }
+
+.ba-column-9 {
+  width: 75%; }
+
+.ba-column-8 {
+  width: 66.667%; }
+
+.ba-column-7 {
+  width: 58.33333333%; }
+
+.ba-column-6 {
+  width: 50%; }
+
+.ba-column-5 {
+  width: 41.6666667%; }
+
+.ba-column-4 {
+  width: 33.334%; }
+
+.ba-column-3 {
+  width: 25%; }
+
+.ba-column-2 {
+  width: 16.667%; }
+
+.ba-column-1 {
+  width: 8.334%; }
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url("../fonts/leaguespartan-bold/leaguespartan-bold.eot");
+  src: url("../fonts/leaguespartan-bold/leaguespartan-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguespartan-bold/leaguespartan-bold.woff2") format("woff2"), url("../fonts/leaguespartan-bold/leaguespartan-bold.woff") format("woff"), url("../fonts/leaguespartan-bold/leaguespartan-bold.ttf") format("truetype"), url("../fonts/leaguespartan-bold/leaguespartan-bold.svg#league_spartanbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+body, html {
+  min-height: 100%; }
+
+.ba-container {
+  width: 1440px;
+  padding: 0 25px; }
+
+a, button, .ba-btn, input[type=submit] {
+  transition: all .2s ease-in; }
+
+.ba-lines {
+  z-index: -1;
+  width: 1440px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.06; }
+
+.ba-line {
+  background-color: #585858;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+  .ba-line--1 {
+    left: 108px; }
+  .ba-line--2 {
+    left: 414px; }
+  .ba-line--3 {
+    left: 719px; }
+  .ba-line--4 {
+    left: 1028px; }
+  .ba-line--5 {
+    left: 1330px; }
+
+.ba-socials {
+  position: fixed;
+  right: 45px;
+  bottom: 45px; }
+  .ba-socials__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .ba-socials__item {
+    text-align: center; }
+    .ba-socials__item + .ba-socials__item {
+      margin-top: 33px; }
+  .ba-socials__link {
+    font-size: 24px;
+    color: #EBEBEB; }
+    .ba-socials__link:hover {
+      color: #ababab; }
+
+.ba-header {
+  padding: 40px 0; }
+
+.ba-navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.ba-navigation__item {
+  float: left; }
+  .ba-navigation__item + .ba-navigation__item {
+    margin-left: 45px; }
+
+.ba-navigation__link {
+  text-decoration: none;
+  font-size: 9px;
+  line-height: 44px;
+  color: #0b0c11;
+  text-transform: uppercase;
+  letter-spacing: 0.62em;
+  font-family: 'League Spartan'; }
+  .ba-navigation__link:hover {
+    color: #757da6; }
+
+#logo {
+  fill: #5da8ef; }
