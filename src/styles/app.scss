@@ -1,9 +1,20 @@
+$brand-color: #5da8ef;
+$brand-dark: #0b0c11;
+
 body, html {
 	min-height: 100%;
 }
+body {
+	font-family: 'Poppins', serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #8F8F8F;
+	line-height: 1.7;
+	letter-spacing: 0.025em;
+}
 
 .ba-container {
-	width: 1440px;
+	max-width: 1440px;
 	padding: 0 25px;
 }
 
@@ -88,20 +99,224 @@ a, button, .ba-btn, input[type=submit] {
 		text-decoration: none;
 		font-size: 9px;
 		line-height: 44px;
-		color: #0b0c11;
+		color: $brand-dark;
 		text-transform: uppercase;
 		letter-spacing: 0.62em;
 		font-family: 'League Spartan';
 		&:hover {
-			color: lighten(#0b0c11, 50%);
+			color: lighten($brand-dark, 50%);
 		}
 	}
 } 
 #logo {
 	fill: #5da8ef;
 }
+// banner part
+.ba-slider {
+	.ba-slide {
+		outline: none;
+	}
+}
+.ba-title {
+	position: relative;
+	font-size: 62px;
+	color: $brand-dark;
+	line-height: 1;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	margin: 0;
+	padding: 25px 0;
+	.ba-sub {
+		text-transform: uppercase;
+		font-family: 'League Spartan', sans-serif;
+		font-size: 9px;
+		color: $brand-color;
+		letter-spacing: 0.6em;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+	}
+}
+.ba-banner {
+	position: relative;
+	.ba-slider {
+		position: relative;
+		.slick-dots {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			li {
+				display: inline-block;
+				margin: 0 5px;
+				&.slick-active {
+					button {
+						text-decoration: line-through;
+					}
+				}
+			}
+		}
+		.slick-list {
+			overflow-y: visible;
+		}
+		.ba-slide {
+			position: relative;
+			min-height: 572px;
+		}
+		&__controls {
+			position: absolute;
+			left: 0;
+			bottom: 65px;
+		}
+		&__arrow {
+			border: none;
+			background: transparent;
+			border-radius: 0;
+			padding: 0;
+			color: #EBEBEB;
+			font-size: 24px;
+			line-height: 1;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+			top: -2px;
+			&:hover {
+				color: darken(#EBEBEB, 25%);
+			}
+		}
+		&__counter {
+			padding: 0 20px;
+			color: #EBEBEB;
+			.ba-current-position {
+				color: $brand-color;
+			}
+			.ba-amount {
+				color: $brand-dark;
+			}
+		}
+	}
+	&__text {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+	}
+	&__image {
+		z-index: 1;
+		position: absolute;
+		left: 200px;
+		top: 3%;
+		text-align: right;
+		img {
+			display: inline-block;
+			width: 85%;
+			box-shadow: -16px 25px 65px 0px rgba(11, 12, 17, .2); 	
+		}
+	}
+}
+.ba-section {
+	&__promo {
+		position: absolute;
+		top: -100px;
+		right: 50px;
+		transform: rotate(-90deg);
+		font-size: 9px;
+		font-family: 'League Spartan';
+		letter-spacing: .6em;
+		opacity: .2;
+		text-transform: uppercase;
+		transform-origin: 100%;
+	} 
+}
+
+.ba-box {
+	height: 300px;
+	background-color: grey;
+	position: relative;
+	overflow: hidden;
+	.ba-corner {
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		right: -10px;
+		bottom: -10px;
+		border: 10px solid $brand-color;
+		transition: all .2s ease-in;
+	}
+	&:hover {
+		.ba-corner {
+			top: 10px;
+			left: 10px;
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+}
 
 
+.ba-shop {
+	padding: 80px 0;
+	.ba-slider {
+		.slick-list {
+			overflow-y: visible;
+		}
+		.slick-arrow {
+			&:before {
+				color: black;
+			}
+		}
+		.ba-slide {
+			text-align: center;
+			padding-top: 200px;
+			img {
+				display: inline-block;
+			}
+		}
+	}
+	#ba-shop {
+		.ba-slider {
+			.ba-slide {
+				&.slick-current {
+					background-color: red;
+				}
+			}
+		}
+	}
+	.ba-image-wrapper {
+		position: relative;
+		height: 325px;
+		background-color: grey;
+		width: 60%;
+		margin: 0 auto;
+		img {
+			position: absolute;
+			bottom: 5%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.ba-title {
+		text-align: center;
+		padding: 0;
+		.ba-sub {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 2px;
+			height: 20px;
+			background-color: $brand-color;
+		}
+	}
+}
 
 
 

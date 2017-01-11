@@ -54,16 +54,16 @@
                         <nav class="ba-navigation">
                             <ul class="ba-navigation__list ba-clearfix">
                                 <li class="ba-navigation__item">
-                                    <a href="#" class="ba-navigation__link">Stories</a>
+                                    <a href="#stories" class="ba-navigation__link">Stories</a>
                                 </li>
                                 <li class="ba-navigation__item">
-                                    <a href="#" class="ba-navigation__link">Events</a>
+                                    <a href="#events" class="ba-navigation__link">Events</a>
                                 </li>
                                 <li class="ba-navigation__item">
-                                    <a href="#" class="ba-navigation__link">Places</a>
+                                    <a href="#places" class="ba-navigation__link">Places</a>
                                 </li>
                                 <li class="ba-navigation__item">
-                                    <a href="#" class="ba-navigation__link">Boards</a>
+                                    <a href="#boards" class="ba-navigation__link">Boards</a>
                                 </li>
                             </ul>
                         </nav>
@@ -72,14 +72,14 @@
             </div>
         </header>
 
-        <section class="ba-banner">
+        <section class="ba-banner" id="stories">
             <div class="ba-container">
                 <div class="ba-slider" id="banner-slider">
 
                     <div class="ba-slide">
                         <div class="ba-banner__text">
                             <h2 class="ba-title"><span class="ba-sub">Your</span>Beautiful Escape</h2>
-                            <p>One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.</p>
+                            <p>One of the greatest things about the sport of surfing is<br>that you need only three things: your body,<br>a surfboard, and a wave.</p>
                         </div>
                         <div class="ba-banner__image">
                             <img src="dist/images/banner.jpg" alt="Surfing">
@@ -104,19 +104,143 @@
                         </div>
                     </div>
 
-                    <div class="ba-slider__controls">
-                        <button class="ba-slider__arrow ba-slider__arrow--left"></button>
-                        <div class="ba-slider__counter">
-                            <span class="ba-current-position">1</span>
-                            /
-                            <span class="ba-amount">5</span>
+                    <div class="ba-slider__controls ba-clearfix">
+                        <button class="ba-slider__arrow ba-slider__arrow--left ba-float-left">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                        <div class="ba-slider__counter ba-float-left">
+                            <span class="ba-current-position">1</span> / <span class="ba-amount">5</span>
                         </div>
-                        <button class="ba-slider__arrow ba-slider__arrow--right"></button>
+                        <button class="ba-slider__arrow ba-slider__arrow--right ba-float-left">
+                            <i class="fa fa-angle-right"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="ba-section__promo">First surfing magazine</div>
+            </div>
+            <div class="ba-section__promo">First surfing magazine</div>
+        </section>
+
+        <section class="ba-about" id="events">
+            <div class="ba-container">
+                <h3 class="ba-title ba-title--light">Surfing is the most blissful experience you can have on this planet, a taste of heaven.</h3>
+                <div class="ba-author">John Mccarthy</div>
+                <div class="ba-grid">
+                    <div class="ba-column-3 ba-box">
+                        <div class="ba-corner"></div>
+                    </div>
+                    <div class="ba-column-3 ba-box">
+                        <div class="ba-corner"></div>
+                    </div>
+                    <div class="ba-column-3 ba-box">
+                        <div class="ba-corner"></div>
+                    </div>
+                    <div class="ba-column-3 ba-box">
+                        <div class="ba-corner"></div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section class="ba-shop" id="boards">
+            <div class="ba-container">
+                <h2 class="ba-title"><span class="ba-sub">Shop</span>Surfboards</h2>
+
+                <div id="ba-shop-big">
+                    <div class="ba-slider ba-grid">
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board.png" alt="Board">
+                        </div>
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board-2.png" alt="Board">
+                        </div>
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board.png" alt="Board">
+                        </div>
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board.png" alt="Board">
+                        </div>
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board.png" alt="Board">
+                        </div>
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board.png" alt="Board">
+                        </div>
+                        <div class="ba-column-12 ba-slide">
+                            <img src="dist/images/board.png" alt="Board">
+                        </div>
+                    </div>
+                </div>
+                <div id="ba-shop">
+                    <div class="ba-grid ba-slider">
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board-2.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                        <div class="ba-column-4 ba-slide">
+                            <div class="ba-image-wrapper ba-shop__image">
+                                <img src="dist/images/board.png" alt="Board">
+                            </div>
+                            <div class="ba-shop__text">
+                                <h4 class="ba-shop__title">Test</h4>
+                                <p class="ba-shop__price">400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="places"></section>
 
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
