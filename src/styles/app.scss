@@ -1,6 +1,15 @@
 $brand-color: #5da8ef;
 $brand-dark: #0b0c11;
 
+@mixin small-text {
+	text-decoration: none;
+	font-size: 9px;
+	color: $brand-dark;
+	text-transform: uppercase;
+	letter-spacing: 0.62em;
+	font-family: 'League Spartan';
+}
+
 body, html {
 	min-height: 100%;
 }
@@ -96,13 +105,9 @@ a, button, .ba-btn, input[type=submit] {
 		}
 	}
 	&__link {
-		text-decoration: none;
-		font-size: 9px;
+		@include small-text;
 		line-height: 44px;
-		color: $brand-dark;
-		text-transform: uppercase;
-		letter-spacing: 0.62em;
-		font-family: 'League Spartan';
+	
 		&:hover {
 			color: lighten($brand-dark, 50%);
 		}
@@ -139,6 +144,7 @@ a, button, .ba-btn, input[type=submit] {
 }
 .ba-banner {
 	position: relative;
+	padding: 0 0 90px;
 	.ba-slider {
 		position: relative;
 		.slick-dots {
@@ -217,6 +223,107 @@ a, button, .ba-btn, input[type=submit] {
 		}
 	}
 }
+
+//Stories block
+
+.ba-stories {
+	padding: 90px 0 100px;
+	.ba-grid {
+		position: relative;
+	}
+	.ba-post {
+		padding-right: 0;
+	}
+	.ba-video {
+		position: absolute;
+		width: 57%;
+		right: 0;
+		top: 45px;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.ba-quote {
+	margin: 0 0 60px;
+	text-align: center;
+	position: relative;
+	padding: 0 0 155px;
+	&:after {
+		content: '';
+		width: 2px;
+		height: 100px;
+		position: absolute;
+		bottom: 0;
+		background-color: $brand-color;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__text {
+		font-family: 'Playfair Display', serif;
+		font-size: 26px;
+		letter-spacing: .01em;
+		line-height: 1.4;
+		color: #333;
+		display: block;
+		width: 47%;
+		margin: 0 auto 25px;
+		&:after, &:before {
+			content: "";
+		}
+	}
+	&__author {
+		@include small-text;
+		font-style: normal;
+	}
+}
+.ba-post {
+	&__image {
+		display: block;
+		width: 100%;
+	}
+	&__text {
+		margin: 55px auto 0;
+		width: 50%;
+		p {
+			margin: 0;
+		}
+	}
+}
+.ba-read-more {
+	@include small-text;
+	line-height: 1;
+	margin-top: 40px;
+	display: inline-block;
+	padding-bottom: 10px;
+	position: relative;
+	&:after, &:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		background-color: $brand-color;
+		width: 47.5%;
+		height: 2px;
+		transition: all 1s;
+		transition-timing-function: cubic-bezier(0.13, 0.72, 1, 0.6);
+	}
+	&:after {
+		right: 52.5%;
+	}
+	&:before {
+		left: 47.5%;
+	}
+	&:hover {
+		&:before, &:after {
+			width: 0;
+		}
+	}
+}
+
+
+
 .ba-section {
 	&__promo {
 		position: absolute;

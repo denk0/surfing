@@ -22,7 +22,6 @@
 			$(this).find('button').text( '0' + $(this).find('button').text() );
 		});
 
-
 		// shop sliders
 		$('#ba-shop-big .ba-slider').slick({
 			slide: '.ba-slide',
@@ -47,13 +46,9 @@
 		});
 	});
 
-
-
 	function updateCurrentSlide() {
-		var currentSlideIndex = $('#banner-slider .slick-active').data('slick-index') + 1;
+		var currentSlideIndex = $('#banner-slider .slick-current').data('slick-index') + 1;
 		$('#banner-slider .ba-current-position').text(currentSlideIndex);
 	}
-
-
 
 })(jQuery);
